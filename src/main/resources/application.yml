@@ -2,3 +2,20 @@
 application:
     storage:
         type: ${STORAGE_TYPE}
+        filesystem:
+            path: D:/TMP/
+            max-file-size: 1MB
+
+#Spring Properties
+spring:
+    output:
+        ansi:
+            enabled: always
+    mvc:
+        favicon:
+            enabled: false
+        servlet:
+            load-on-startup: 1
+    http:
+        multipart:
+            max-file-size: ${application.storage.filesystem.max-file-size}
