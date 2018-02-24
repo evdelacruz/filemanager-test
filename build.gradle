@@ -22,3 +22,12 @@ bootRepackage {
     mainClass = 'org.test.filemanager.Main'
     executable = true
 }
+
+jar {
+    manifest {
+        attributes 'Implementation-Vendor'	     : 'EVDELACRUZ',
+                   'Implementation-Version'	     : version,
+                   'Implementation-Title'	     : 'FILEMANAGER'
+    }
+    baseName = 'filemanager'
+}
