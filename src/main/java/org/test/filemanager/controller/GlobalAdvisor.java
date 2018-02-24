@@ -6,19 +6,21 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.multipart.MultipartException;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-import static org.springframework.http.ResponseEntity.status;
+import static org.springframework.http.ResponseEntity.*;
 
 @ControllerAdvice
 public class GlobalAdvisor {
     private static final Logger LOGGER = LoggerFactory.getLogger(GlobalAdvisor.class);
-    private static final Map<Class<? extends Exception>, Function<Exception, ResponseEntity<Error>>> EXCEPTIONS = new HashMap<>();
+    private static final Map<Class<? extends Exception>, Function<Exception, ResponseEntity>> EXCEPTIONS = new HashMap<>();
 
     static {
-
+        EXCEPTIONS.put(MultipartException.class, ex -> badRequest().body(ex.getMessage()));
     }
 
     @ExceptionHandler({Exception.class})
