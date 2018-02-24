@@ -5,6 +5,8 @@ application:
         filesystem:
             path: D:/TMP/
             max-file-size: 1MB
+        metadata:
+            path: D:/TMP/
 
 #Spring Properties
 spring:
@@ -19,3 +21,5 @@ spring:
     http:
         multipart:
             max-file-size: ${application.storage.filesystem.max-file-size}
+    jackson:
+        default-property-inclusion: non_null
