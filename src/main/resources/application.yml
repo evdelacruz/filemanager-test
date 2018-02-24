@@ -1,0 +1,4 @@
+#Application Properties
+application:
+    storage:
+        type: ${STORAGE_TYPE}
