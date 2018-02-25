@@ -1,0 +1,22 @@
+#Application Properties
+application:
+    storage:
+        type: ${storage-type}
+        filesystem:
+            path: ${path}
+            max-file-size: ${max-file-size}
+        metadata:
+            path: ${path}
+
+#Spring Properties
+spring:
+    mvc:
+        favicon:
+            enabled: false
+        servlet:
+            load-on-startup: 1
+    http:
+        multipart:
+            max-file-size: ${application.storage.filesystem.max-file-size}
+    jackson:
+        default-property-inclusion: non_null
