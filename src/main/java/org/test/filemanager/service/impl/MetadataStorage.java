@@ -26,11 +26,18 @@ public class MetadataStorage implements StorageService {
         if (file.isEmpty()) {
             throw new IllegalArgumentException("Invalid multipart file");
         }
-        Metadata metadata = new Metadata(file.getOriginalFilename(), file.getSize(), this.getExtension(file.getOriginalFilename()));
+        String fileName = file.getOriginalFilename();
+        Metadata metadata = new Metadata(this.getName(fileName), file.getSize(), this.getExtension(fileName));
         this.save(metadata);
     }
 
     //<editor-fold desc="Support methods">
+    private String getName(String fileName) {
+        return fileName.contains(".")
+                ? fileName.substring(0, fileName.lastIndexOf('.'))
+                : fileName;
+    }
+
     private String getExtension(String fileName) {
         if (fileName.contains(".")) {
             String[] array = fileName.split("\\.");

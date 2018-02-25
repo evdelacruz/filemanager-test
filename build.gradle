@@ -25,8 +25,7 @@ bootRepackage {
 
 jar {
     manifest {
-        attributes 'Implementation-Vendor'	     : 'EVDELACRUZ',
-                   'Implementation-Version'	     : version,
+        attributes 'Implementation-Version'	     : version,
                    'Implementation-Title'	     : 'FILEMANAGER'
     }
     baseName = 'filemanager'

@@ -1,18 +1,15 @@
 #Application Properties
 application:
     storage:
-        type: ${STORAGE_TYPE}
+        type: ${storage-type}
         filesystem:
-            path: D:/TMP/
-            max-file-size: 1MB
+            path: ${path}
+            max-file-size: ${max-file-size}
         metadata:
-            path: D:/TMP/
+            path: ${path}
 
 #Spring Properties
 spring:
-    output:
-        ansi:
-            enabled: always
     mvc:
         favicon:
             enabled: false
