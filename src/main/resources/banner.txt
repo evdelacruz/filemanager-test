@@ -1,6 +1,7 @@
 ${AnsiColor.BLACK}=======================================
 ${AnsiColor.GREEN}      ${application.title}
 ${AnsiColor.BLACK}=======================================
-${AnsiColor.BLACK}Application Version : ${AnsiColor.BRIGHT_CYAN}${application.version}
 ${AnsiColor.BLACK}Spring Boot Version : ${AnsiColor.CYAN}${spring-boot.version}
+${AnsiColor.BLACK}Application Version : ${AnsiColor.CYAN}${application.version}
+${AnsiColor.BLACK}Application Storage : ${AnsiColor.CYAN}${storage-type}
 ${AnsiColor.BLACK}=======================================
