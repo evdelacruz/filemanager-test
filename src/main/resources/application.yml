@@ -2,11 +2,18 @@
 application:
     storage:
         type: ${storage-type}
+        max-file-size: ${max-file-size}
         filesystem:
             path: ${path}
-            max-file-size: ${max-file-size}
         metadata:
             path: ${path}
+        amazon-s3:
+            bucket-name: <name>
+            access-key: <access>
+            secret-key: <secret>
+            region: us-east-1
+
+#us-east-1
 
 #Spring Properties
 spring:
@@ -17,6 +24,6 @@ spring:
             load-on-startup: 1
     http:
         multipart:
-            max-file-size: ${application.storage.filesystem.max-file-size}
+            max-file-size: ${application.storage.max-file-size}
     jackson:
         default-property-inclusion: non_null
