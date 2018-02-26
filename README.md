@@ -14,8 +14,10 @@
 
 ## Usage
 * **FileSystem**: `java -Dstorage-type=filesystem -Dpath=path -Dmax-file-size=size -jar filemanager.jar`
-* **Metadata**:   `java -Dstorage-type=metadata -Dpath=path -Dmax-file-size=size -jar filemanager.jar`
-* **S3**:   	  `java -Dstorage-type=s3 -Dmax-file-size=size -jar filemanager.jar`
+* **Metadata**:   &nbsp;&nbsp;
+                  `java -Dstorage-type=metadata -Dpath=path -Dmax-file-size=size -jar filemanager.jar`
+* **S3**:   	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  `java -Dstorage-type=s3 -Dmax-file-size=size -jar filemanager.jar`
 
 
 Where:
