@@ -1,7 +1,6 @@
 ${AnsiColor.BLACK}=======================================
-${AnsiColor.GREEN}      ${application.title}
+${AnsiColor.GREEN}              FILEMANAGER
 ${AnsiColor.BLACK}=======================================
 ${AnsiColor.BLACK}Spring Boot Version : ${AnsiColor.CYAN}${spring-boot.version}
-${AnsiColor.BLACK}Application Version : ${AnsiColor.CYAN}${application.version}
 ${AnsiColor.BLACK}Application Storage : ${AnsiColor.CYAN}${storage-type}
 ${AnsiColor.BLACK}=======================================
