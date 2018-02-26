@@ -13,6 +13,12 @@
 * Amazon AWS 1.11.285
 
 ## Usage
-* FileSystem: **java** -Dstorage-type=*filesystem* -Dpath=*path* -Dmax-file-size=*size* **-jar** filemanager.jar<br>
-* Metadata:   **java** -Dstorage-type=*metadata* -Dpath=*path* -Dmax-file-size=*size* **-jar** filemanager.jar<br>
-* S3:   	  **java** -Dstorage-type=*s3* -Dmax-file-size=1MB **-jar** filemanager.jar<br>
+* **FileSystem**: `java -Dstorage-type=filesystem -Dpath=path -Dmax-file-size=size -jar filemanager.jar`
+* **Metadata**:   `java -Dstorage-type=metadata -Dpath=path -Dmax-file-size=size -jar filemanager.jar`
+* **S3**:   	  `java -Dstorage-type=s3 -Dmax-file-size=size -jar filemanager.jar`
+
+
+Where:
+- *size* can be specified like this: **1MB**
+- *path* is a real path on the server
+- *filesystem*, *metadata* and *s3* are the keys for the type of storage that the application will use.
